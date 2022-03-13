@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .one {
+            width: 1216px;
+            height: 23px;
+            padding: 20px;
+
+            background-color: white;
+            margin: 30px auto;
+            border-top: 3px solid green;
+            margin-top: 0;
+        }
+
+        .one p {
+            text-align: center;
+            font-size: 19px;
+        }
+
+        .two_list {
+            margin: auto;
+            width: 1256px;
+            height: 1093px;
+            background-color: rgba(0, 0, 0, 0.1)
+        }
+
+        .fist_center {
+            padding: 20px 20px 30px 20px;
+            background-color: white;
+            margin: auto;
+        }
+
+        .tou {
+
+            height: 30px;
+            border-bottom: 2px solid green;
+        }
+
+        .tou_2 {
+            width: 50px;
+            height: 2px;
+            background: green;
+            margin-top: 1px;
+        }
+
+        .product {
+            padding: 10px 20px 10px 20px;
+        }
+
+        .table_list {
+            margin: auto;
+            height: 688px;
+            width: 1221px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-collapse: separate;
+            border-spacing: 3px;
+        }
+
+        .table_list img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .two_list th {
+            padding: 11px 43px;
+            color: white;
+        }
+
+        table thead {
+            background-color: green;
+            color: white;
+            font-size: 17px;
+            font-weight: 500;
+            vertical-align: middle;
+        }
+
+        .table_list th:first-child {
+            border-radius: 6px 0px 0px 6px;
+        }
+
+        .table_list th:last-child {
+            border-right: none;
+            border-radius: 0px 6px 6px 0px;
+        }
+
+        .table_list tr .del {
+            width: 30px;
+            height: 30px;
+        }
+
+        .table_list td {
+            border-bottom: 1px solid white;
+            background-color: #fff;
+        }
+
+        .pay_for {
+            width: 500px;
+            height: 290px;
+            margin: 10px auto;
+            background-color: white;
+        }
+
+        .pay_list {
+            width: 500px;
+            height: 290px;
+            padding: 15px 20px;
+
+        }
+
+        .pay_list td {
+            border-bottom: 2px solid green;
+            border-collapse: collapse;
+        }
+
+        .pay_list h3,
+        tr:last-child {
+            color: green;
+        }
+
+        /* 时间 */
+        .time {
+            width: 1256px;
+            height: 300px;
+            background-color: white;
+            margin: auto;
+        }
+
+        .time_center {
+            padding: 20px 20px 30px 20px;
+
+        }
+
+        .t_1 {
+
+            height: 50px;
+            border-bottom: 1px solid green;
+            margin-bottom: 1px;
+        }
+
+        .zdy_time {
+            width: 1218px;
+            height: 210px;
+            background-color: white;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .time_one {
+            width: 30%;
+            box-sizing: border-box;
+            height: 110px;
+            margin-top: 56px;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 9px;
+        }
+
+        .time_one span {
+            line-height: 60px;
+        }
+
+        /* 最后一栏付款方式 */
+        .time_btn {
+            width: 1256px;
+            height: 400px;
+            background-color: white;
+            margin: auto;
+        }
+
+        /* 同意条款 */
+        .agree {
+            margin-top: 15px;
+        }
+
+        .agree a {
+            color: green;
+            text-decoration: none;
+        }
+
+        .agree,
+        a {
+            font-size: 18px;
+        }
+
+        .pf {
+            display: block;
+            width: 100%;
+            height: 40px;
+            box-sizing: border-box;
+            background-color: green;
+            color: white;
+            border-radius: 9px;
+            margin-top: 23px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 表顶部 -->
+    <div class="one">
+        <p>已经是会员<a href="#">点此处登陆?</a></p>
+    </div>
+    <!-- 商品列表 -->
+    <div class="two_list">
+        <div class="fist_center">
+            <div class="tou">
+                <h4>您的订单</h4>
+            </div>
+            <div class="tou_2"></div>
+        </div>
+        <div class="product">
+            <div class="product_center">
+                <table class="table_list">
+                    <thead>
+                        <tr>
+                            <th>行</th>
+                            <th>产品</th>
+                            <th>名字</th>
+                            <th>价格</th>
+                            <th>生产地</th>
+                            <th>数量</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td><img src="./product/01.jpg" alt=""></td>
+                            <td>产品名称</td>
+                            <td>19 美元 /公斤</td>
+                            <td>生鲜公司</td>
+                            <td>3</td>
+                            <td><img src="./img/删除.png" alt="" class="del"></td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td><img src="./product/01.jpg" alt=""></td>
+                            <td>产品名称</td>
+                            <td>19 美元 /公斤</td>
+                            <td>生鲜公司</td>
+                            <td>3</td>
+                            <td><img src="./img/删除.png" alt="" class="del"></td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td><img src="./product/01.jpg" alt=""></td>
+                            <td>产品名称</td>
+                            <td>19 美元 /公斤</td>
+                            <td>生鲜公司</td>
+                            <td>3</td>
+                            <td><img src="./img/删除.png" alt="" class="del"></td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td><img src="./product/01.jpg" alt=""></td>
+                            <td>产品名称</td>
+                            <td>19 美元 /公斤</td>
+                            <td>生鲜公司</td>
+                            <td>3</td>
+                            <td><img src="./img/删除.png" alt="" class="del"></td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td><img src="./product/01.jpg" alt=""></td>
+                            <td>产品名称</td>
+                            <td>19 美元 /公斤</td>
+                            <td>生鲜公司</td>
+                            <td>3</td>
+                            <td><img src="./img/删除.png" alt="" class="del"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pay_for">
+                    <table class="pay_list">
+                        <tr>
+                            <th></th>
+                            <th>
+                                <h3>您的消费单</h3>
+                            </th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>小计</td>
+                            <td colspan="2"></td>
+                            <td>￥9999</td>
+                        </tr>
+                        <tr>
+                            <td>送货费用</td>
+                            <td colspan="2"></td>
+                            <td>￥9999</td>
+                        </tr>
+                        <tr>
+                            <td>优惠券</td>
+                            <td colspan="2"></td>
+                            <td>￥9999</td>
+                        </tr>
+
+                        <tr>
+                            <td>合计</td>
+                            <td colspan="2"></td>
+                            <td>￥9999</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 收获时间 -->
+    <div class="time">
+        <div class="time_center">
+            <div class="t_1">
+                <h2>送达时间</h2>
+            </div>
+            <div class="tou_2"></div>
+            <!-- 三个收火框 -->
+            <div class="zdy_time">
+                <div class="time_one">
+                    <span>一小时内送达</span>
+                </div>
+                <div class="time_one">
+                    <span>小时内送达</span>
+                </div>
+                <div class="time_one">
+                    <span>一小时内送达</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="time">
+        <div class="time_center">
+            <div class="t_1">
+                <h2>联系电话</h2>
+            </div>
+            <div class="tou_2"></div>
+            <!-- 三个收火框 -->
+            <div class="zdy_time">
+                <div class="time_one">
+                    <span>一小时内送达</span>
+                </div>
+                <div class="time_one">
+                    <span>小时内送达</span>
+                </div>
+                <div class="time_one">
+                    <span>一小时内送达</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="time">
+        <div class="time_center">
+            <div class="t_1">
+                <h2>有地地址</h2>
+            </div>
+            <div class="tou_2"></div>
+            <!-- 三个收火框 -->
+            <div class="zdy_time">
+                <div class="time_one">
+                    <span>一小时内送达</span>
+                </div>
+                <div class="time_one">
+                    <span>小时内送达</span>
+                </div>
+                <div class="time_one">
+                    <span>一小时内送达</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="time_btn">
+        <div class="time_center">
+            <div class="t_1">
+                <h2>付款方式</h2>
+            </div>
+            <div class="tou_2"></div>
+            <!-- 三个收火框 -->
+            <div class="zdy_time">
+                <div class="time_one">
+                    <span>一小时内送达</span>
+                </div>
+                <div class="time_one">
+                    <span>小时内送达</span>
+                </div>
+                <div class="time_one">
+                    <span>一小时内送达</span>
+                </div>
+            </div>
+            <div class="agree">
+                <label for=""><input type="checkbox"></label>
+                <span>通过进行此购买，您同意我们的 <a href="">条款和条件</a></span>
+            </div>
+            <button class="pf">结账</button>
+        </div>
+    </div>
+</body>
+
+</html>
