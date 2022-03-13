@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{ margin: 0; padding: 0;box-sizing: border-box;}
+    img{ display:block; width: 100%;}
+    ul{ list-style: none;}
+    a{ text-decoration: none;}
+    .gjm-product-details-page{
+      padding: 50px;
+      background-color: #F5F5F5;
+    }
+    .gjm-product-details-center{
+      width: 75%;
+      margin: 10px auto;
+      display: flex;
+      justify-content: space-between;
+    }
+    .gjm-product-details-left,.gjm-product-details-right{
+      width: 47%;
+      margin: 5px;
+      position: relative;
+    }
+    .gjm-product-details-left div{
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .gjm-product-details-s-img{
+      display: flex;
+      justify-content: space-between;
+    }
+    .gjm-product-details-s-img div{
+      margin: 8px 0 0 ;
+      width: 19%;
+      border: 1px solid rgba(0,0,0,0);
+    }
+    .gjm-product-details-s-img div:hover{
+      border: 1px solid rgb(17,151,68, .8);
+      border-radius: 6px;
+      transition: 1s;
+    }
+    .gjm-product-miaosha{
+      width: 40px;
+      height: 30px;
+      color: #FFF;
+      font-size: 16px;
+      text-align: center;
+      line-height: 200%;
+      border-radius: 8px;
+      background-color: rgb(232, 97, 33);
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+    .gjm-product-details-banner{
+      margin: 3px 0;
+      border-radius: 6px;
+      overflow: hidden;
+      opacity: .8;
+    }
+    .gjm-product-details-card{
+      padding: 30px 30px 0;
+      background-color: #FFF;
+      border-radius: 6px;
+      color: rgb(57, 64, 74);
+    }
+    .gjm-product-details-card .xing{
+      color: rgb(250, 250, 26);
+      font-size: 24px;
+    }
+    .gjm-product-details-card li{
+      padding: 0 0 20px;
+      font-size: 20px;
+    }
+    .gjm-product-details-card del{
+      color: rgb(225,56,56);
+      font-weight: bold;
+    }
+    .gjm-product-details-piece span{
+      font-size: 26px;
+      font-weight: bold;
+      color: rgb(17, 151, 68);
+    }
+    .gjm-product-details-piece small{
+      color: rgb(17, 151, 68);
+    }
+    .gjm-product-details-serve{
+      padding: 5px 0;
+    }
+    .gjm-product-details-serve a{
+      color: rgb(57, 64, 74);
+    }
+    .gjm-product-details-serve li{
+      font-size: 12px;
+      line-height: 100%;
+      padding: 0 3px;
+      display:inline;
+    }
+    .gjm-product-details-serve div{
+      padding: 5px 0;
+      width: 8%;
+      display: inline-block;
+    }
+    .gjm-product-details-serve .gjm-product-details-share{
+      width: 4%;
+    }
+    .gjm-product-details-btn{
+      text-align: center;
+    }
+    .gjm-product-details-btn button{
+      margin: 8px 0;
+      padding: 8px 5px;
+      font-size: 15px;
+      border: 1px solid rgba(102, 102, 102,.2);
+      border-radius: 6px;
+      line-height:1.8;
+      background-color: rgba(86, 87, 101，.4);
+    }
+    .gjm-product-details-btn1 button:hover,.gjm-product-details-btn2 button:hover{
+      color: #FFF;
+      background-color: rgb(17, 151, 68);
+      transition: 1s;
+      margin: 3px 0;
+    }
+    .gjm-product-details-btn1 button{
+      width: 40%;
+    }
+    .gjm-product-details-btn2 button{
+      width: 60%;
+    }
+    /* 底部详情 */
+    .gjm-product-details-details{
+      width: 75%;
+      margin: 10px auto;
+      display: flex;
+      justify-content: center;
+      border-bottom: 1px solid rgba(102, 102, 102,.2);
+    }
+    .gjm-product-details-show{
+       width: 75%;
+      margin: 10px auto;
+      display: flex;
+      text-align: center;
+      border: 0 solid;
+      display: block;
+    }
+    .gjm-product-details-details div{
+      padding: 3px 10px;
+    }
+    .gjm-product-details-details a{
+      font-size: 22px;
+      color: rgb(57, 64, 74);
+      background-color: #FFF;
+      border-radius: 6px;
+      padding: 0 5px;
+    }
+    .gjm-product-details-details a:hover{
+      color: #FFF;
+      background-color: rgb(17, 151, 68);
+      transition: 1s;
+    }
+    .gjm-product-details-table{
+      width: 100%;
+    }
+    .gjm-product-details-table table{
+      width: 100%;
+      border-collapse:collapse;
+      background-color: #FFF;
+    }
+    .gjm-product-details-table td{
+      padding:15px;
+      border: 1px solid rgba(102, 102, 102,.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="gjm-product-details-page">
+    <div class="gjm-product-details-center">
+      <div class="gjm-product-details-left">
+        <div><img src="./product/01.jpg" alt=""></div>
+        <div class="gjm-product-details-hide">
+          <div class="gjm-product-miaosha">
+            <span>秒杀</span>
+          </div>
+        </div>
+        <div class="gjm-product-details-s-img">
+          <div><img src="./product/01.jpg" alt=""></div>
+          <div><img src="./product/02.jpg" alt=""></div>
+          <div><img src="./product/03.jpg" alt=""></div>
+          <div><img src="./product/04.jpg" alt=""></div>
+          <div><img src="./product/05.jpg" alt=""></div>
+        </div>
+      </div>
+      <div class="gjm-product-details-right">
+        <div class="gjm-product-details-banner">
+           <div><img src="./product/single-banner.jpg" alt=""></div>
+        </div>
+        <div class="gjm-product-details-card">
+          <h1>密刺黄瓜500g+-50g</h1>
+          <div>
+            <ul>
+              <li><span>评分:</span><span class="xing">★★★★★</span></li>
+              <li class="gjm-product-details-piece">
+                <del>￥4.69</del>
+                <span>￥2.59</span>
+                <small>/piece</small>
+              </li>
+            </ul>
+          </div>
+          <div class="gjm-product-details-serve">
+            <p><a href="#">服务</a></p>
+            <ul>
+              <li>限时秒杀</li>
+              <li>破损无忧</li>
+              <li>质量保障</li>
+              <li>正规发票</li>
+              <li>爱心公益计划</li>
+              <li>7天价保</li>
+            </ul>
+          </div>
+          <div>
+            <div class="gjm-product-details-serve">
+              <span><a href="#">分享</a></span>
+              <div class="gjm-product-details-share"><img src="./product/share.svg" alt=""></div>
+              <ul>
+                <li><div><img src="./product/xinlang.svg" alt=""></div></li>
+                <li><div><img src="./product/weixin.svg" alt=""></div></li>
+                <li><div><img src="./product/email.svg" alt=""></div></li>
+              </ul>
+            </div>
+          </div>
+          <div class="gjm-product-details-btn">
+            <div class="gjm-product-details-btn1">
+              <button>加入购物车</button>
+              <button><span>❤️</span>收藏</button>
+            </div>
+            <div class="gjm-product-details-btn2">
+              <a href="#"><button>立即购买</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gjm-product-details-bottom">
+      <div>      
+        <div class="gjm-product-details-details">
+          <div><a href="#"><span>商品详情</span></a></div>
+          <div><a href="#"><span>商品评价</span></a></div>
+        </div>
+        <div class="gjm-product-details-show">
+          <div class="gjm-product-details-table">
+            <table>
+              <tr><td>产地</td><td>陕西西安</td></tr>
+              <tr><td>储存条件</td><td>常温</td></tr>
+              <tr><td>保质期</td><td>3天</td></tr>
+              <tr><td>售后说明</td><td>不支持七天无理由</td></tr>
+            </table>
+          </div>
+          <div class="gjm-product-details-show-img">
+            <div><img src="./product/20.jpg" alt=""></div>
+            <div><img src="./product/0020001.jpg" alt=""></div>
+            <div><img src="./product/0020002.jpg" alt=""></div>
+            <div><img src="./product/0020003.jpg" alt=""></div>
+            <div><img src="./product/0020004.jpg" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

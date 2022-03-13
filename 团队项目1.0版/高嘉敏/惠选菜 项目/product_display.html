@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/bootstrap-icons.css">
+  <script src="./js/bootstrap.bundle.js"></script>
+  <title></title>
+  <style>
+    *{ margin: 0; padding: 0;box-sizing: border-box;}
+    img{ display:block; width: 100%;}
+    ul{ list-style: none;}
+    a{ text-decoration: none;}
+    .gjm-product-display{
+      padding: 60px 0 20px;
+      background-color: #F5F5F5;
+    }
+    .gjm-product-display-item,.gjm-product-breadcrumb{
+      width: 1315px;
+      margin: 0 auto;
+    }
+    /* 商品导航 */
+    .gjm-product-class{
+      width: 1315px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .gjm-product-class-page{
+      margin: 10px;
+      width: 20%;
+      padding: 20px;
+    }
+    .gjm-product-class-show{
+      width: 80%;
+    }
+    .gjm-product-class-show h3{
+      margin: 10px;
+      padding: 18px;
+      border-bottom: 1px solid rgb(17, 151, 68);
+    }
+    .gjm-product-class-show ul{
+      padding: 10px;
+      border-left: 1px solid rgba(102, 102, 102,.2);
+    }
+    .gjm-product-class-show a{
+      font-size: 14px;
+      color: rgb(86,87,101);
+    }
+    .gjm-product-class-show li{
+      padding: 2px 20px;
+      letter-spacing: 10px
+    }
+    .gjm-product-class-show li:hover{
+      background-color: rgba(86, 87, 101, .2);
+      border-radius: 6px;
+    }
+    .gjm-product-class-show li:hover a{
+      color: rgb(17, 151, 68);
+      font-size: 16px;
+    }
+    .gjm-product-breadcrumb a{
+      font-size: 18px;
+      color: rgb(86,87,101);
+    }
+    /* 商品陈列 */
+    .gjm-product-display-item ul{
+      display: flex;
+      flex-wrap: wrap;
+      border-radius: 6px 6px 0px 0px;
+    }
+    .gjm-product-display-item ul li{
+      overflow: hidden;
+      margin: 5px 5px;
+      background-color: #F5F5F5;
+    }
+    .gjm-product-card-item{
+      width: 246px;
+      height: 361px;
+      border-radius: 6px;
+    }
+    .gjm-product-card{
+      padding: 12px 0;
+      border:1px solid rgba(102, 102, 102,.2);
+      background-color: #FFF;
+      color: rgb(17,151,68);
+      border-radius: 6px;
+      position: relative;
+    }
+    .gjm-product-card:hover{
+      border: 1px solid green;
+      border-radius: 6px;
+      transition: 1s;
+    }
+    .gjm-product-card-top{
+      width: 75%;
+      padding: 5px 0 0;
+      margin: 10px auto 10px;
+      border-bottom: 1px solid rgba(102, 102, 102,.2);
+    }
+    .gjm-product-card-top-left{
+      width: 40px;
+      height: 30px;
+      color: #FFF;
+      font-size: 16px;
+      text-align: center;
+      line-height: 200%;
+      border-radius: 8px;
+      background-color: rgb(232, 97, 33);
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+    .gjm-product-card-freight{
+      position: absolute;
+      top: 250px;
+      left: 30px;
+      color: rgb(225,56,56);
+    }
+    .gjm-product-card-body{
+      line-height: 30px;
+      text-align:  center;
+    }
+    .gjm-product-card-name{
+      font-size: 16px;
+      color: rgb(86,87,101);
+    }
+    .gjm-product-card-body p{
+      font-weight: bold;
+    }
+    .gjm-product-card-body p del{
+      color: rgb(225,56,56);
+    }
+    .gjm-product-card-body div button{
+      width: 75%;
+      padding: 8px 0;
+      font-size: 15px;
+      border: 1px solid rgba(102, 102, 102,.2);
+      border-radius: 6px;
+    }
+    .gjm-product-card:hover .gjm-product-card-body div button,.gjm-product-load button:hover{
+      color: #FFF;
+      background-color: rgb(17, 151, 68);
+      transition: 1s;
+    }
+    .gjm-product-breadcrumb{
+      color: rgb(86, 87, 101);
+    }
+    .gjm-product-load{
+      text-align: right;
+    }
+    .gjm-product-load button{
+      margin: 5px;
+      padding: 2px 8px;
+      color: rgb(17, 151, 68);
+      border: 1px solid rgb(17, 151, 68);
+      border-radius: 6px;
+      background-color: #FFF;
+    }
+    .gjm-product-disp-dottom{
+      width: 100%;
+      height: 289px;
+      background-image: url(./product/single-banner.jpg);
+      background-size: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="gjm-product-display"> 
+    <!-- 商品导航 -->
+    <div class="gjm-product-class">
+      <div class="gjm-product-class-page">
+        <div class="gjm-product-class-show">
+          <h3>蔬菜</h3>
+          <ul>
+            <li><a href="">西兰花</a></li>
+            <li><a href="">茄子</a></li>
+            <li><a href="">芦笋</a></li>
+            <li><a href="">菜花</a></li>
+            <li><a href="">胡萝卜</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="gjm-product-class-page">
+        <div class="gjm-product-class-show">
+          <h3>水果</h3>
+          <ul>
+            <li><a href="">苹果</a></li>
+            <li><a href="">橙子</a></li>
+            <li><a href="">香蕉</a></li>
+            <li><a href="">榴莲</a></li>
+            <li><a href="">樱桃</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="gjm-product-class-page">
+        <div class="gjm-product-class-show">
+          <h3>海产品</h3>
+          <ul>
+            <li><a href="">龙虾</a></li>
+            <li><a href="">章鱼</a></li>
+            <li><a href="">草鱼</a></li>
+            <li><a href="">螃蟹</a></li>
+            <li><a href="">三文鱼</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="gjm-product-class-page">
+        <div class="gjm-product-class-show">
+          <h3>肉类</h3>
+          <ul>
+            <li><a href="">鸡腿</a></li>
+            <li><a href="">牛肉</a></li>
+            <li><a href="">猪前腿</a></li>
+            <li><a href="">瘦肉</a></li>
+            <li><a href="">整鸭</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="gjm-product-class-page">
+        <div class="gjm-product-class-show">
+          <h3>快餐食品</h3>
+          <ul>
+            <li><a href="">汉堡</a></li>
+            <li><a href="">三明治</a></li>
+            <li><a href="">甜甜圈</a></li>
+            <li><a href="">披萨</a></li>
+            <li><a href="">小麦面包</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="gjm-product-breadcrumb">
+        <div class="gjm-product-breadcrumb-title">
+            <a href="#">首页</a>
+            <span>></span>
+            <span>全部结果</span>
+        </div>
+        <div class="gjm-product-filter">
+        </div>
+    </div>
+      <!--商品陈列 -->
+      <div class="gjm-product-display-item">
+        <ul>
+          <li>
+            <div class="gjm-product-card-item">
+              <div class="gjm-product-card">
+                <div class="gjm-product-card-top">
+                  <div class="gjm-product-card-img">
+                    <a href="#"><img src="./product/0020001.jpg" alt=""></a>
+                  </div>
+                  <div class="gjm-product-card-hide">
+                    <div class="gjm-product-card-top-left">
+                      <span>秒杀</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="gjm-product-card-body">
+                  <a href="#" class="gjm-product-card-name">密刺黄瓜500g+-50g</a><br>
+                  <p>
+                    <del>￥4.69</del>
+                    <span>￥2.59</span>
+                    <small>/piece</small>
+                  </p>
+                  <div>
+                    <a href="#"><button>加入购物车</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="gjm-product-card-item">
+              <div class="gjm-product-card">
+                <div class="gjm-product-card-top">
+                  <div class="gjm-product-card-img">
+                    <a href="#"><img src="./product/0020001.jpg" alt=""></a>
+                  </div>
+                  <div class="gjm-product-card-hide">
+                    <div class="gjm-product-card-top-left">
+                      <span>秒杀</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="gjm-product-card-body">
+                  <a href="#" class="gjm-product-card-name">密刺黄瓜500g+-50g</a><br>
+                  <p>
+                    <del>￥4.69</del>
+                    <span>￥2.59</span>
+                    <small>/piece</small>
+                  </p>
+                  <div>
+                    <a href="#"><button>加入购物车</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="gjm-product-card-item">
+              <div class="gjm-product-card">
+                <div class="gjm-product-card-top">
+                  <div class="gjm-product-card-img">
+                    <a href="#"><img src="./product/0020001.jpg" alt=""></a>
+                  </div>
+                  <div class="gjm-product-card-hide">
+                    <div class="gjm-product-card-top-left">
+                      <span>秒杀</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="gjm-product-card-body">
+                  <a href="#" class="gjm-product-card-name">密刺黄瓜500g+-50g</a><br>
+                  <p>
+                    <del>￥4.69</del>
+                    <span>￥2.59</span>
+                    <small>/piece</small>
+                  </p>
+                  <div>
+                    <a href="#"><button>加入购物车</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="gjm-product-card-item">
+              <div class="gjm-product-card">
+                <div class="gjm-product-card-top">
+                  <div class="gjm-product-card-img">
+                    <a href="#"><img src="./product/0020001.jpg" alt=""></a>
+                  </div>
+                  <div class="gjm-product-card-hide">
+                    <div class="gjm-product-card-top-left">
+                      <span>秒杀</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="gjm-product-card-body">
+                  <a href="#" class="gjm-product-card-name">密刺黄瓜500g+-50g</a><br>
+                  <p>
+                    <del>￥4.69</del>
+                    <span>￥2.59</span>
+                    <small>/piece</small>
+                  </p>
+                  <div>
+                    <a href="#"><button>加入购物车</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="gjm-product-card-item">
+              <div class="gjm-product-card">
+                <div class="gjm-product-card-top">
+                  <div class="gjm-product-card-img">
+                    <a href="#"><img src="./product/0020001.jpg" alt=""></a>
+                  </div>
+                  <div class="gjm-product-card-hide">
+                    <div class="gjm-product-card-top-left">
+                      <span>秒杀</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="gjm-product-card-body">
+                  <a href="#" class="gjm-product-card-name">密刺黄瓜500g+-50g</a><br>
+                  <p>
+                    <del>￥4.69</del>
+                    <span>￥2.59</span>
+                    <small>/piece</small>
+                  </p>
+                  <div>
+                    <a href="#"><button>加入购物车</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="gjm-product-card-item">
+              <div class="gjm-product-card">
+                <div class="gjm-product-card-top">
+                  <div class="gjm-product-card-img">
+                    <a href="#"><img src="./product/0020001.jpg" alt=""></a>
+                  </div>
+                  <div class="gjm-product-card-hide">
+                    <div class="gjm-product-card-top-left">
+                      <span>秒杀</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="gjm-product-card-body">
+                  <a href="#" class="gjm-product-card-name">密刺黄瓜500g+-50g</a><br>
+                  <p>
+                    <del>￥4.69</del>
+                    <span>￥2.59</span>
+                    <small>/piece</small>
+                  </p>
+                  <div>
+                    <a href="#"><button>加入购物车</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="gjm-product-card-item">
+              <div class="gjm-product-card">
+                <div class="gjm-product-card-top">
+                  <div class="gjm-product-card-img">
+                    <a href="#"><img src="./product/0020001.jpg" alt=""></a>
+                  </div>
+                  <div class="gjm-product-card-hide">
+                    <div class="gjm-product-card-top-left">
+                      <span>秒杀</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="gjm-product-card-body">
+                  <a href="#" class="gjm-product-card-name">密刺黄瓜500g+-50g</a><br>
+                  <p>
+                    <del>￥4.69</del>
+                    <span>￥2.59</span>
+                    <small>/piece</small>
+                  </p>
+                  <div>
+                    <a href="#"><button>加入购物车</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="gjm-product-card-item">
+              <div class="gjm-product-card">
+                <div class="gjm-product-card-top">
+                  <div class="gjm-product-card-img">
+                    <a href="#"><img src="./product/0020001.jpg" alt=""></a>
+                  </div>
+                  <div class="gjm-product-card-hide">
+                    <div class="gjm-product-card-top-left">
+                      <span>秒杀</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="gjm-product-card-body">
+                  <a href="#" class="gjm-product-card-name">密刺黄瓜500g+-50g</a><br>
+                  <p>
+                    <del>￥4.69</del>
+                    <span>￥2.59</span>
+                    <small>/piece</small>
+                  </p>
+                  <div>
+                    <a href="#"><button>加入购物车</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="gjm-product-card-item">
+              <div class="gjm-product-card">
+                <div class="gjm-product-card-top">
+                  <div class="gjm-product-card-img">
+                    <a href="#"><img src="./product/0020001.jpg" alt=""></a>
+                  </div>
+                  <div class="gjm-product-card-hide">
+                    <div class="gjm-product-card-top-left">
+                      <span>秒杀</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="gjm-product-card-body">
+                  <a href="#" class="gjm-product-card-name">密刺黄瓜500g+-50g</a><br>
+                  <p>
+                    <del>￥4.69</del>
+                    <span>￥2.59</span>
+                    <small>/piece</small>
+                  </p>
+                  <div>
+                    <a href="#"><button>加入购物车</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="gjm-product-card-item">
+              <div class="gjm-product-card">
+                <div class="gjm-product-card-top">
+                  <div class="gjm-product-card-img">
+                    <a href="#"><img src="./product/0020001.jpg" alt=""></a>
+                  </div>
+                  <div class="gjm-product-card-hide">
+                    <div class="gjm-product-card-top-left">
+                      <span>秒杀</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="gjm-product-card-body">
+                  <a href="#" class="gjm-product-card-name">密刺黄瓜500g+-50g</a><br>
+                  <p>
+                    <del>￥4.69</del>
+                    <span>￥2.59</span>
+                    <small>/piece</small>
+                  </p>
+                  <div>
+                    <a href="#"><button>加入购物车</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <!-- 加载 -->
+        <div class="gjm-product-load"> 
+          <div>
+            <button>上一页</button>
+            <button>下一页</button>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="gjm-product-disp-dottom">
+  </div>
+</body>
+</html>

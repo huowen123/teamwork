@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <script src="./js/bootstrap.bundle.js"></script>
+  <title>Document</title>
+  <style>
+    body{
+    position: relative;
+    }
+    *{ margin: 0; padding: 0;box-sizing: border-box;}
+    img{ display:block;width: 100%;}
+    ul{ list-style: none;}
+    a{ text-decoration: none;}
+    /* 客服入口 */
+    .gjm-service{
+      padding: 3px;
+      border: 1px solid rgba(102, 102, 102,.5);
+      background-color: rgba(102, 102, 102,.1);
+      border-radius: 3px;
+      position: absolute;
+      right: 5px;
+      top: 100px;
+    }
+    .gjm-service:hover{
+      border: 2px solid rgba(17, 151, 68 ,1);
+      background-color: rgba(17, 151, 68 ,.1);
+      transition: 1s;
+    }
+    .gjm-service-logo{
+      width: 50px;
+      margin: 0 auto;
+      padding: 0;
+    }
+    .gjm-service span{
+      font-size: 14px;
+    }
+
+    /* 客服页面 */
+    .gjm-service-page{
+      background-color:  #F5F5F5;
+      height: 100vh;
+    }
+    .gjm-service-center{
+      width: 75%;
+      margin: 0 auto;
+    }
+    .gjm-service-title div{
+        width: 100%;
+        border-bottom: 1px solid rgba(102, 102, 102,.2);
+    }
+    .gjm-service-title div div{
+        margin: 0 auto;
+        width: 50px;
+        border: 0;
+    }
+    .gjm-service-body{
+      background-color: #fff;
+      padding: 20px 10px;
+      height: 500px;
+    }
+    .gjm-service-query-log{
+      width: 100%;
+    }
+    .gjm-service-query-log div{
+      width: 150px;
+      margin: 0 auto;
+    }
+    .gjm-service-query-log div button{
+      font-size: 14px;
+      border: 0 ;
+      background-color: rgba(0, 0, 0, 0);
+    }
+    .gjm-service-time div{
+      margin: 30px auto;
+      font-size: 14px;
+      color: rgb(86, 87, 101);
+      text-align: center;
+    }
+    .gjm-service-hi{
+      width: 70%;
+    }
+    .gjm-service-hi div{
+      padding: 10 2px;
+      display: flex;
+    }
+    .gjm-service-hi div p{
+      background-color: #F5F5F5;
+      border-radius: 10px;
+    }
+    .gjm-service-function{
+      width: 70vw;
+      margin: 5px;
+      display: flex;
+    }
+    .gjm-service-function-card{
+      margin: 5px;
+      padding-bottom: 3px;
+      background-color: #F5F5F5;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 14px;
+    }
+    .gjm-service-function-card div{
+      width: 6vw;
+      height: 60px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+    }
+    .gjm-service-function div img{
+        width: 50%;
+    }
+    .gjm-service-function-card:hover {
+      box-shadow: inset 0 1px 1px #00000013,0 0 8px rgba(17, 151, 68,.5)
+    }
+    .gjm-service-bottom{
+      height: 40px; 
+      padding: 2px 5px;
+      background-color: rgba(86, 87, 101, .1);
+      display: flex;
+      align-items:center;
+      justify-content: space-between;
+    }
+    .gjm-service-bottom-left{
+      width: 20%;
+      height: 100%;
+      display: flex;
+      align-items:center;
+    }
+    .gjm-service-bottom-left div{
+      width: 25%;
+      height: 100%;
+    }
+    .gjm-service-bottom-left div:hover{
+      border-radius: 4px;
+      background-color: #fff;
+    }
+    .gjm-service-bottom-left div img{
+      height: 100%;
+    }
+    .gjm-service-bottom-text{
+      width: 70%;
+    }
+    .gjm-service-bottom-text input{
+      height: 32px;
+      width: 100%;
+      outline-style: none;
+      border: 0;
+      border-radius: 5px;
+      font-size: 16px;
+      box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(86, 87, 101,.3)
+    }
+    .gjm-service-bottom-text input:hover{
+      box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(86, 87, 101,.3)
+    }
+    .gjm-service-text-send{
+      width: 10%;
+      display: flex;
+      justify-content: space-around;
+    }
+    .gjm-service-text-send button{
+      padding: 3px;
+      width: 70%;
+      height: 28px;
+      border: 0;
+      border-radius: 8px;
+    }
+    .gjm-service-text-send button:hover{
+      background-color: #fff;
+      color: rgb(17, 151, 68);
+    }
+  </style>
+</head>
+<body>
+  <!-- 客服入口 -->
+  <div class="gjm-service">
+    <div class="gjm-service-logo"><img src="./product/service-logo.svg" alt=""></div>
+    <span>联系客服</span>
+  </div>
+  <!-- 客服页面 -->
+  <div class="gjm-service-page">
+    <div class="gjm-service-center">
+      <div class="gjm-service-title">
+        <div>
+          <div><img src="./product/service-logo.svg" alt=""></div>
+        </div>
+      </div>
+      <div class="gjm-service-body">
+        <div class="gjm-service-query-log">
+          <div><button>点击查看历史咨询记录</button></div>
+        </div>
+        <div class="gjm-service-time">
+          <div><span>15:32</span></div>
+        </div>
+        <div class="gjm-service-hi">
+          <div><p>Hi,有什么需要咨询的呢?小惠来帮您~您也可以拨打客服热线56891523(服务时间:  07:00-22:00)</p></div>
+        </div>
+        <div class="gjm-service-function">
+          <div class="gjm-service-function-card">
+            <div><img src="./product/fu-comment.svg" alt=""></div>
+            <p>评价管理</p>
+          </div>
+          <div class="gjm-service-function-card">
+            <div><img src="./product/fu-transportation.svg" alt=""></div>
+            <p>物流管理</p>
+          </div>
+          <div class="gjm-service-function-card">
+            <div><img src="./product/fu-refund.svg" alt=""></div>
+            <p>退款进度</p>
+          </div>
+          <div class="gjm-service-function-card">
+            <div><img src="./product/fu-location.svg" alt=""></div>
+            <p>修改地址</p>
+          </div>
+          <div class="gjm-service-function-card">
+            <div><img src="./product/fu-seckill.svg" alt=""></div>
+            <p>秒杀商品</p>
+          </div>
+        </div>
+      </div>
+      <div class="gjm-service-bottom">
+        <div class="gjm-service-bottom-left">
+          <div><img src="./product/send-photo.svg" alt=""></div>
+          <div><img src="./product/send-take a picture.svg" alt=""></div>
+          <div><img src="./product/send-orderFrom.svg" alt=""></div>
+          <div><img src="./product/send-face.svg" alt=""></div>
+        </div>
+        <div class="gjm-service-bottom-text">
+          <input type="text" name="" id="" placeholder="请输入您想咨询的问题">
+        </div>
+        <div class="gjm-service-text-send">
+          <button>发送</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
